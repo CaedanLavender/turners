@@ -14,6 +14,8 @@
 .formContainer {
 	border: 2px solid black;
 	flex: 80%;
+	display: flex;
+	flex-direction: column;
 }
 
 .quoteSideContent {
@@ -21,10 +23,36 @@
 	flex: 20%;
 }
 
-h1.form {
+.formContainer h1 {
 	text-transform: uppercase;
 }
 
-.test {
-	color: blue !important;
+.formContainer h1::after {
+	margin: 0.2em 0;
+	content: "";
+	display: block;
+	height: 1px;
+	width: 100%;
+	background-color: black;
+}
+
+.formSection label {
+	margin: 1em 2em;
+	display: flex;
+	/* flex-direction: row; */
+}
+
+.formSection {
+	margin: 1em 2em;
+	display: flex;
+	flex-direction: column;
+}
+
+.formSection::after {
+	margin: 0.2em 0;
+	content: "";
+	display: block;
+	height: 1px;
+	width: 100%;
+	background-color: black;
 }

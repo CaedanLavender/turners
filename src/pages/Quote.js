@@ -24,7 +24,7 @@ const Quote = () => {
 			</section>
 			<section className='quote__body'>
 				<div className='formContainer'>
-					<QuoteForm className="test"/>
+					<QuoteForm />
 				</div>
 				<aside className="quoteSideContent">
 					<h2>Why insure with us?</h2>

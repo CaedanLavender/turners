@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import 'styles/Quote.css'
 
 const FormCar = () => {
 	const driverTemplate = {
@@ -10,10 +11,10 @@ const FormCar = () => {
 	}
 
 	const [carFormData, setCarFormData] = useState({
-			registration: "",
-			business: false,
-			address: "",
-			startDate: "",
+		registration: "",
+		business: false,
+		address: "",
+		startDate: "",
 	});
 	const [driverFormData, setDriverFormData] = useState([driverTemplate]);
 
@@ -24,8 +25,22 @@ const FormCar = () => {
 	return (
 		<>
 			<h1 className="form">Car</h1>
-			<label>Hey</label>
-		<input type="text" value="testing" />
+			<div className='formSection'>
+				<label>registration of car
+					<input type="text"
+						value={carFormData.registration}
+						onChange={(e) => setCarFormData({ ...carFormData, registration: e.target.value })}
+					/>
+				</label>
+			</div>
+			<div className='formSection'>
+				<label>used for business
+					<input type="text"
+						value={carFormData.registration}
+						onChange={(e) => setCarFormData({ ...carFormData, registration: e.target.value })}
+					/>
+				</label>
+			</div>
 		</>
 	)
 }
