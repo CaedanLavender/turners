@@ -1,0 +1,13 @@
+* {
+	/* border: 1px solid red; */
+}
+
+.quote__header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.quote__body {
+	border: 1px solid red;
+}
