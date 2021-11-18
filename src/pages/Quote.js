@@ -26,6 +26,15 @@ const Quote = () => {
 				<div className='formContainer'>
 					<QuoteForm />
 				</div>
+				<aside className="quoteSideContent">
+					<h2>Why insure with us?</h2>
+					<ul>
+						<li>best value car insurance</li>
+						<li>most trusted used car dealership in NZ</li>
+						<li>provide quality assurance</li>
+						<li>provide qualtiy assurance</li>
+					</ul>
+				</aside>
 			</section>
 		</>
 	);

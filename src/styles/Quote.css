@@ -1,7 +1,3 @@
-* {
-	/* border: 1px solid red; */
-}
-
 .quote__header {
 	display: flex;
 	flex-direction: column;
@@ -10,4 +6,16 @@
 
 .quote__body {
 	border: 1px solid red;
+	display: flex;
+	flex-direction: row;
+}
+
+.formContainer {
+	border: 2px solid black;
+	flex: 80%;
+}
+
+.quoteSideContent {
+	border: 1px solid black;
+	flex: 20%;
 }
