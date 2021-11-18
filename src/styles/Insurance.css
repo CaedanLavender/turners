@@ -1,0 +1,40 @@
+* {
+	/* border: 1px solid red; */
+}
+
+.insurance__header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.toggleContainer {
+	background-color: black;
+	border: 1px solid black;
+	display: flex;
+	flex-direction: row;
+	border-radius: 1em;
+	gap: 1px;
+	overflow: hidden;
+	-webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
+	-ms-border-radius: 1em;
+	-o-border-radius: 1em;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.toggleContainer__item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--superlight-gray);
+	width: 250px;
+	padding: 1em;
+	cursor: pointer;
+	font-weight: 600;
+	transition: background-color, 100ms;
+}
+
+.toggleContainer__item.active, .toggleContainer__item:hover {
+	background-color: var(--light-gray);
+}
