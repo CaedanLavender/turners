@@ -1,9 +1,9 @@
 import React from "react";
 
-const Insure = () => {
+const Insurance = () => {
 	return (  
-		<h1>Insure page content</h1>
+		<h1>Insurance page content</h1>
 	);
 }
 
-export default Insure;
+export default Insurance;
