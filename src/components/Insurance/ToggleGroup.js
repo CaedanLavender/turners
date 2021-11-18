@@ -1,5 +1,5 @@
 import React from "react";
-import 'styles/Insurance.css';
+import 'styles/toggleGroup.css';
 
 const ToggleGroup = ({ items, activeItem, setActiveItem }) => {
 
