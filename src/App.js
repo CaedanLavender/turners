@@ -4,7 +4,7 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import Insure from './pages/Insure';
+import Insurance from './pages/Insurance';
 import Quote from './pages/Quote';
 
 // REACT ROUTER IMPORTS
@@ -19,8 +19,8 @@ function App() {
 				<Header />
 				<Routes>
 					<Route path="/" element={<Home />} />
-					<Route path="/insure" element={<Insure />} />
-					<Route path="/insure/quote" element={<Quote />} />
+					<Route path="/insurance" element={<Insurance />} />
+					<Route path="/insurance/get_quote" element={<Quote />} />
 				</Routes>
 				<Footer />
 			</div>
