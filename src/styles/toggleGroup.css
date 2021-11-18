@@ -28,3 +28,41 @@
 .toggleContainer__item.active, .toggleContainer__item:hover {
 	background-color: var(--light-gray);
 }
+
+.toggleSwitchContainer {
+	background-color: var(--dark-gray);
+	border: 1px solid var(--dark-gray);
+	color: white;
+	display: flex;
+	flex-direction: row;
+	border-radius: 0.5em;
+	gap: 1px;
+	overflow: hidden;
+	text-transform: uppercase;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	-ms-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+	width: min-content;
+	/* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px; */
+}
+
+.toggleSwitch__item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--blue);
+	width: 50px;
+	padding: 0.5em;
+	cursor: pointer;
+	font-weight: 600;
+	transition: background-color, 100ms;
+	-webkit-transition: background-color, 100ms;
+	-moz-transition: background-color, 100ms;
+	-ms-transition: background-color, 100ms;
+	-o-transition: background-color, 100ms;
+}
+
+.toggleSwitch__item.active, .toggleSwitch__item:hover {
+	background-color: var(--dark-blue);
+}
