@@ -5,9 +5,10 @@
 }
 
 .quote__body {
-	border: 1px solid red;
+	/* border: 1px solid red; */
 	display: flex;
 	flex-direction: row;
+	gap: 1em;
 }
 
 .formContainer {
@@ -18,4 +19,12 @@
 .quoteSideContent {
 	border: 1px solid black;
 	flex: 20%;
+}
+
+h1.form {
+	text-transform: uppercase;
+}
+
+.test {
+	color: blue !important;
 }
