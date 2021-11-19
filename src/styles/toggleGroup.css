@@ -17,6 +17,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 	background-color: var(--superlight-gray);
 	width: 250px;
 	padding: 1em;
@@ -109,3 +110,4 @@
 .hidden {
 	display: none;
 }
+

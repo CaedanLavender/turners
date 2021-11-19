@@ -1,3 +1,13 @@
+.quoteContainer {
+	max-width: 1000px;
+	padding: 2em;
+	display: flex;
+	flex-direction: column;
+	gap: 3em;
+	align-items: center;
+	margin: 0 auto;
+}
+
 .quote__header {
 	display: flex;
 	flex-direction: column;
@@ -16,11 +26,13 @@
 	flex: 80%;
 	display: flex;
 	flex-direction: column;
+	padding: 2em;
 }
 
 .quoteSideContent {
 	border: 1px solid black;
 	flex: 20%;
+	padding: 1em;
 }
 
 .formContainer h1 {
@@ -51,10 +63,16 @@
 }
 
 .formSection::after {
-	/* margin: 0.2em 0; */
 	content: "";
 	display: block;
 	height: 1px;
 	width: 100%;
 	background-color: var(--light-gray);
+}
+
+.formSection input[type=text] {
+	outline: none;
+	border: none;
+	background-color: var(--lighter-gray);
+	padding: 1em;
 }

@@ -9,7 +9,7 @@ const FormCar = () => {
 		gender: "m",
 		licenceType: "",
 		licenceTime: "",
-		incident: false,
+		incident: "n",
 	}
 
 	const typeOfLicence = [
@@ -64,6 +64,15 @@ const FormCar = () => {
 	const setLicence = (value) => {
 		setDriverFormData(driverFormData.map((driver, i) => i === 0 ? ({ ...driver, licenceType: value }) : driver))
 	}
+	
+	const setLicenceTime = (value) => {
+		setDriverFormData(driverFormData.map((driver, i) => i === 0 ? ({ ...driver, licenceTime: value }) : driver))
+	}
+	
+	const setIncident = (value) => {
+		setDriverFormData(driverFormData.map((driver, i) => i === 0 ? ({ ...driver, incident: value }) : driver))
+	}
+
 
 	return (
 		<>
@@ -140,6 +149,20 @@ const FormCar = () => {
 						<div className='formSection'>
 							<label>type of licence
 								<SelectList list={typeOfLicence} activeItem={driverFormData[0].licenceType} setItem={setLicence}/>
+							</label>
+						</div>
+
+						<div className='formSection'>
+							<label>time you've had your licence
+								<SelectList list={timeOnLicence} activeItem={driverFormData[0].licenceTime} setItem={setLicenceTime}/>
+							</label>
+						</div>
+
+						<div className='formSection'>
+							<label>had a claim/incident(s) in the last 5 years?
+								<div className='formSection__right'>
+									<ToggleSwitch switches={["y", "n"]} activeSwitch={driverFormData[0].incident} setSwitch={setIncident}/>
+								</div>
 							</label>
 						</div>
 

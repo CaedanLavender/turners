@@ -17,7 +17,7 @@ const Quote = () => {
 	const handleSetInsuranceType = (type) => {setInsuranceType(type)}
 
 	return (
-		<>
+		<div className='quoteContainer'>
 			<section className='quote__header'>
 				<h1>get a quote for:</h1>
 				<ToggleGroup items={insuranceTypes} activeItem={insuranceType} setActiveItem={handleSetInsuranceType}/>
@@ -36,7 +36,7 @@ const Quote = () => {
 					</ul>
 				</aside>
 			</section>
-		</>
+		</div>
 	);
 }
 
