@@ -1,15 +1,30 @@
 import React, { useState, useEffect } from "react";
 import 'styles/Quote.css'
 import ToggleSwitch from "components/ToggleSwitch";
+import SelectList from 'components/SelectList'
 
 const FormCar = () => {
 	const driverTemplate = {
 		dob: "",
-		gender: "",
+		gender: "m",
 		licenceType: "",
 		licenceTime: "",
 		incident: false,
 	}
+
+	const typeOfLicence = [
+		"learners",
+		"restricted",
+		"full",
+		"international"
+	]
+
+	const timeOnLicence = [
+		"under 1 year",
+		"1-2 years",
+		"2-4 years",
+		"5 years +"
+	]
 
 	const [carFormData, setCarFormData] = useState({
 		registration: "",
@@ -26,11 +41,28 @@ const FormCar = () => {
 	const removeDriver = (index) => {
 		const newArray = driverFormData.filter((driver, i) => i !== index)
 		setDriverFormData(newArray)
-	
+
 	}
 
 	const setBusiness = (value) => {
 		setCarFormData({ ...carFormData, business: value })
+	}
+
+	// const setGender = (value, driver) => {
+	// 	console.log(value)
+	// 	setDriverFormData(
+	// 		() => {
+	// 		console.log(driverFormData.map((arrayItem, i) => driver === i ? {...arrayItem, gender: value} : arrayItem
+	// 	))}
+	// 	)
+	// }
+
+	const setGender = (value) => {
+		setDriverFormData(driverFormData.map((driver, i) => i === 0 ? ({ ...driver, gender: value }) : driver))
+	}
+	
+	const setLicence = (value) => {
+		setDriverFormData(driverFormData.map((driver, i) => i === 0 ? ({ ...driver, licenceType: value }) : driver))
 	}
 
 	return (
@@ -80,7 +112,7 @@ const FormCar = () => {
 			{
 				driverFormData.map((driver, i) => (
 					<>
-						<h1>Driver {driverFormData.length > 1 && i + 1 }</h1>
+						<h1>Driver {driverFormData.length > 1 && i + 1}</h1>
 
 						<div className='formSection'>
 							<label>date of birth
@@ -89,14 +121,29 @@ const FormCar = () => {
 										value={driverFormData.dob}
 										onChange={
 											(e) => {
-											setDriverFormData(driverFormData.map((driverr, ii) => ii === i ? {...driverr, dob: e.target.value} : driverr
-										))}}
+												setDriverFormData(driverFormData.map((driverr, ii) => ii === i ? { ...driverr, dob: e.target.value } : driverr
+												))
+											}}
 									/>
 								</div>
 							</label>
 						</div>
 
-						<button onClick={addDriver}>Add Driver</button>
+						<div className='formSection'>
+							<label>gender
+								<div className='formSection__right'>
+									<ToggleSwitch switches={["m", "f"]} activeSwitch={driverFormData[0].gender} setSwitch={setGender}/>
+								</div>
+							</label>
+						</div>
+
+						<div className='formSection'>
+							<label>type of licence
+								<SelectList list={typeOfLicence} activeItem={driverFormData[0].licenceType} setItem={setLicence}/>
+							</label>
+						</div>
+
+						{/* <button onClick={addDriver}>Add Driver</button> */}
 					</>
 				))
 			}
