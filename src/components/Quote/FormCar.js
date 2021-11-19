@@ -78,7 +78,7 @@ const FormCar = () => {
 		<>
 			<h1 className="form">Car</h1>
 			<div className='formSection'>
-				<label>registration of car
+				<label><div className='labelText'>registration of car</div>
 					<div className='formSection__right'>
 						<input type="text"
 							value={carFormData.registration}
@@ -89,7 +89,7 @@ const FormCar = () => {
 			</div>
 
 			<div className='formSection'>
-				<label>used for business
+				<label><div className="labelText">used for business</div>
 					<div className='formSection__right'>
 						<ToggleSwitch switches={["y", "n"]} activeSwitch={carFormData.business} setSwitch={setBusiness} />
 					</div>
@@ -124,7 +124,7 @@ const FormCar = () => {
 						<h1>Driver {driverFormData.length > 1 && i + 1}</h1>
 
 						<div className='formSection'>
-							<label>date of birth
+							<label><div className="labelText">date of birth</div>
 								<div className='formSection__right'>
 									<input type="text"
 										value={driverFormData.dob}
@@ -139,7 +139,7 @@ const FormCar = () => {
 						</div>
 
 						<div className='formSection'>
-							<label>gender
+							<label><div className="labelText">gender</div>
 								<div className='formSection__right'>
 									<ToggleSwitch switches={["m", "f"]} activeSwitch={driverFormData[0].gender} setSwitch={setGender}/>
 								</div>
@@ -147,19 +147,19 @@ const FormCar = () => {
 						</div>
 
 						<div className='formSection'>
-							<label>type of licence
+							<label><div className="labelText">type of licence</div>
 								<SelectList list={typeOfLicence} activeItem={driverFormData[0].licenceType} setItem={setLicence}/>
 							</label>
 						</div>
 
 						<div className='formSection'>
-							<label>time you've had your licence
+							<label><div className="labelText">time you've had your licence</div>
 								<SelectList list={timeOnLicence} activeItem={driverFormData[0].licenceTime} setItem={setLicenceTime}/>
 							</label>
 						</div>
 
 						<div className='formSection'>
-							<label>had a claim/incident(s) in the last 5 years?
+							<label><div className="labelText">had a claim/incident(s) in the last 5 years?</div>
 								<div className='formSection__right'>
 									<ToggleSwitch switches={["y", "n"]} activeSwitch={driverFormData[0].incident} setSwitch={setIncident}/>
 								</div>

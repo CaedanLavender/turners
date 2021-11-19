@@ -54,7 +54,7 @@
 	align-items: center;
 	background-color: var(--blue);
 	width: 50px;
-	padding: 0.5em;
+	padding: 1em;
 	cursor: pointer;
 	font-weight: 600;
 	transition: background-color, 100ms;
@@ -70,7 +70,7 @@
 
 .selectList {
 	width: 300px;
-	border: 1px solid var(--dark-gray);
+	/* border: 1px solid var(--dark-gray); */
 	display: flex;
 	flex-direction: column;
 	color: var(--dark-gray);
@@ -83,31 +83,27 @@
 	text-align: center;
 	padding: 0.5em;
 	background-color: white;
-	border-top: 1px solid var(--dark-gray);
-	transition: background-color, 100ms;
-	-webkit-transition: background-color, 100ms;
-	-moz-transition: background-color, 100ms;
-	-ms-transition: background-color, 100ms;
-	-o-transition: background-color, 100ms;
+	transition: all, 100ms;
+	border: 1px solid var(--dark-gray);
+	border-top: none;
+	-webkit-transition: all, 100ms;
+	-moz-transition: all, 100ms;
+	-ms-transition: all, 100ms;
+	-o-transition: all, 100ms;
 }
 
 .selectItem.selected {
+	border-top: 1px solid var(--dark-gray);
 	width: 100%;
 	padding: 1em;
 	background-color: var(--lighter-gray);
-	border: none;
 }
 
 .selectItem:hover {
 	background-color: var(--superlight-gray);
 }
 
-.selectListDropDown {
-	display: flex;
-	flex-direction: column;
-}
-
 .hidden {
-	display: none;
+	visibility: hidden;
 }
 

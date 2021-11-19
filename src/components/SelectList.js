@@ -15,13 +15,11 @@ const SelectList = ({ list, activeItem, setItem }) => {
 	return (
 		<div className='selectList'>
 			<div className='selectItem selected' onClick={toggleDropDown}>{activeItem || "select one"}</div>
-			<div className={`selectListDropDown ${dropIsDown || 'hidden'}`}>
 				{
 					list.map((item) => (
-						<div className='selectItem' onClick={() => handleListSelection(item)}>{item}</div>
+						<div className={`selectItem ${dropIsDown || 'hidden'}`} onClick={() => handleListSelection(item)}>{item}</div>
 					))
 				}
-			</div>
 		</div>
 	)
 }
