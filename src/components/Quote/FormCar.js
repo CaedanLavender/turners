@@ -1,10 +1,13 @@
 import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import 'styles/Quote.css'
 import ToggleSwitch from "components/ToggleSwitch";
 import SelectList from 'components/SelectList'
 
 const FormCar = () => {
+	const remoteURL = "http://turners-api.herokuapp.com/"
+	const localURL = "http://localhost:4000/"
+
 	const driverTemplate = {
 		dob: "",
 		gender: "m",
@@ -37,15 +40,15 @@ const FormCar = () => {
 	const [carData, setCarData] = useState();
 	const [selectedCar, setSelectedCar] = useState("")
 
-	const addDriver = () => {
-		setDriverFormData([...driverFormData, driverTemplate])
-	}
+	// const addDriver = () => {
+	// 	setDriverFormData([...driverFormData, driverTemplate])
+	// }
 
-	const removeDriver = (index) => {
-		const newArray = driverFormData.filter((driver, i) => i !== index)
-		setDriverFormData(newArray)
+	// const removeDriver = (index) => {
+	// 	const newArray = driverFormData.filter((driver, i) => i !== index)
+	// 	setDriverFormData(newArray)
 
-	}
+	// }
 
 	const setBusiness = (value) => {
 		setCarFormData({ ...carFormData, business: value })
@@ -68,7 +71,8 @@ const FormCar = () => {
 	}
 
 	const getCarData = () => {
-		axios.get('http://localhost:4000/plate', {
+
+		axios.get(remoteURL + 'plate', {
 			params: {
 				plate: carFormData.registration
 			}
