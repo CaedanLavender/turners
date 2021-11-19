@@ -63,6 +63,13 @@
 	flex-direction: column;
 }
 
+.formSection__right {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	flex-basis: 50%;
+}
+
 .formSection::after {
 	content: "";
 	display: block;
