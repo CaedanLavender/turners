@@ -1,0 +1,90 @@
+.quoteContainer {
+	max-width: 1300px;
+	padding: 2em;
+	display: flex;
+	flex-direction: column;
+	gap: 3em;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.quote__header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.quote__body {
+	/* border: 1px solid red; */
+	display: flex;
+	flex-direction: row;
+	gap: 1em;
+	width: 100%;
+}
+
+.formContainer {
+	border: 2px solid black;
+	flex: 80%;
+	display: flex;
+	flex-direction: column;
+	padding: 2em;
+}
+
+.quoteSideContent {
+	border: 1px solid black;
+	flex: 20%;
+	padding: 1em;
+}
+
+.formContainer h1 {
+	text-transform: uppercase;
+}
+
+.formContainer h1::after {
+	margin: 0.2em 0;
+	content: "";
+	display: block;
+	height: 1px;
+	width: 100%;
+	background-color: black;
+}
+
+.formSection label {
+	margin: 1em 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.formSection {
+	margin: 0.5em 2em;
+	display: flex;
+	flex-direction: column;
+}
+
+.formSection__right {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	flex-basis: 50%;
+}
+
+.formSection::after {
+	content: "";
+	display: block;
+	height: 1px;
+	width: 100%;
+	background-color: var(--light-gray);
+}
+
+.formSection input[type=text] {
+	outline: none;
+	border: none;
+	background-color: var(--lighter-gray);
+	padding: 1rem;
+}
+
+.labelText {
+	padding: 1em 0;
+}
