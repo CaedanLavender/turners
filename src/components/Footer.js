@@ -1,5 +1,8 @@
 import React from "react";
 import './Footer.css';
+import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
 const Footer = () => {
 	return (
@@ -7,7 +10,7 @@ const Footer = () => {
 		<div className="footer-options">
 			<div className="footer-cars">
 				<h1 className="footer-title">Cars</h1>
-				<button type="button" className="footer-text" href="https://www.google.co.nz/">How to buy</button><br/>
+				<button type="button" className="footer-text" onClick="">How to buy</button><br/>
 				<button type="button" className="footer-text" onClick="">How to sell</button><br/>
 				<button type="button" className="footer-text" onClick="">Auctions</button><br/>	
 				<button type="button" className="footer-text" onClick="">Finance</button><br/>	
@@ -41,9 +44,9 @@ const Footer = () => {
 			<div className="footer-tings1"><img src="turners-logo.jpg" className="footer-pic" alt=""/></div>
 			<div className="footer-tings2"><p className="footer-text1">Call us on 0800 887 637</p></div>
 			<div className="footer-tings3">
-				<button type="button" className="logo-btns1" onclick="">1</button>
-				<button type="button" className="logo-btns2" onclick="">2</button>
-				<button type="button" className="logo-btns3" onclick="">3</button>
+				<button type="button" className="logo-btns1" onclick=""><MailOutlineIcon style={{fill: "white",fontSize:"40px"}}/></button>
+				<button type="button" className="logo-btns2" onclick=""><FacebookRoundedIcon style={{fill: "white",fontSize:"40px"}}/></button>
+				<button type="button" className="logo-btns3" onclick=""><InstagramIcon style={{fill: "white",fontSize:"40px"}}/></button>
 			</div>
 			
 			</div>
