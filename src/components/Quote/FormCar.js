@@ -39,16 +39,8 @@ const FormCar = () => {
 	const [driverFormData, setDriverFormData] = useState([driverTemplate]);
 	const [carData, setCarData] = useState();
 	const [selectedCar, setSelectedCar] = useState("")
-
-	// const addDriver = () => {
-	// 	setDriverFormData([...driverFormData, driverTemplate])
-	// }
-
-	// const removeDriver = (index) => {
-	// 	const newArray = driverFormData.filter((driver, i) => i !== index)
-	// 	setDriverFormData(newArray)
-
-	// }
+	const [addressList, setAddressList] = useState([])
+	const [addressListIsOpen, setAddressListIsOpen] = useState(false);
 
 	const setBusiness = (value) => {
 		setCarFormData({ ...carFormData, business: value })
@@ -71,7 +63,6 @@ const FormCar = () => {
 	}
 
 	const getCarData = () => {
-
 		axios.get(remoteURL + 'plate', {
 			params: {
 				plate: carFormData.registration
@@ -79,6 +70,22 @@ const FormCar = () => {
 		})
 		.then(res => setCarData(res.data))
 		.catch(() => console.log("There was a catch error"))
+	}
+
+	const getAddresses = (prefix) => {
+		axios.get(localURL + 'address', {
+			params: {
+				prefix: prefix
+			}
+		})
+		.then(res => setAddressList(res.data))
+		.catch(() => console.log("There was a catch error"))
+		setAddressListIsOpen(true)
+	}
+
+	const handleAddressSelect = (newAddress) => {
+		setCarFormData({ ...carFormData, address: newAddress})
+		setAddressListIsOpen(false)
 	}
 
 
@@ -120,12 +127,20 @@ const FormCar = () => {
 							value={carFormData.address}
 							onChange={(e) => setCarFormData({ ...carFormData, address: e.target.value })}
 						/>
+						<div className='searchButton' onClick={() => getAddresses(carFormData.address)}>Search</div>
+						<div className={`addressList ${addressListIsOpen || 'gone'}`}>
+							{
+								addressList.map((each) => (
+									<div className="addressListItem" onClick={() => handleAddressSelect(each.Address)}>{each.Address}</div>
+								))
+							}
+						</div>
 					</div>
 				</label>
 			</div>
 
 			<div className='formSection'>
-				<label>start date
+				<label><div className="labelText">start date</div>
 					<div className='formSection__right'>
 						<input type="text"
 							placeholder="DD / MM / YYYY"
