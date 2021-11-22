@@ -163,3 +163,37 @@
 	background-color: var(--blue);
 	color: white;
 }
+
+.mainButton {
+	width: fit-content;
+	padding: 1em;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	font-weight: 800;
+	cursor: pointer;
+	margin: 1em;
+	border: none;
+	border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	-ms-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+}
+
+.button--red {
+	background-color: var(--dark-red);
+	color: white;
+}
+
+.button--red:hover {
+	background-color: var(--darker-red);
+}
+
+.button--green {
+	background-color: var(--green);
+	color: white;
+}
+
+.button--green:hover {
+	background-color: var(--dark-green);
+}

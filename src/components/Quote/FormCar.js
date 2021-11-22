@@ -4,7 +4,7 @@ import 'styles/Quote.css'
 import ToggleSwitch from "components/ToggleSwitch";
 import SelectList from 'components/SelectList'
 
-const FormCar = () => {
+const FormCar = ( props ) => {
 	const remoteURL = "http://turners-api.herokuapp.com/"
 	const localURL = "http://localhost:4000/"
 
@@ -88,6 +88,19 @@ const FormCar = () => {
 		setAddressListIsOpen(false)
 	}
 
+	const handleQuoteSubmit = () => {
+		const config = {
+			method: 'post',
+			url: localURL + 'quotes/new',
+			params: {
+				carData: carFormData,
+				driverData: driverFormData
+			}
+		};
+		axios(config)
+			.then(res => console.log(res))
+			.catch(() => console.log("There was a catch error"))
+	}
 
 	return (
 		<>
@@ -200,7 +213,9 @@ const FormCar = () => {
 							</label>
 						</div>
 
-						{/* <button onClick={addDriver}>Add Driver</button> */}
+						<button className={'mainButton button--red'}>+ add driver</button>
+						<h1></h1>
+						<button className={'mainButton button--green'} onClick={handleQuoteSubmit}>get quote</button>
 					</>
 				))
 			}
