@@ -4,7 +4,7 @@ import 'styles/Quote.css'
 import ToggleSwitch from "components/ToggleSwitch";
 import SelectList from 'components/SelectList'
 
-const FormCar = ( props ) => {
+const FormCar = ({ insuranceType, quote, setQuote }) => {
 	const remoteURL = "http://turners-api.herokuapp.com/"
 	const localURL = "http://localhost:4000/"
 
@@ -93,12 +93,17 @@ const FormCar = ( props ) => {
 			method: 'post',
 			url: localURL + 'quotes/new',
 			params: {
+				type: insuranceType,
 				carData: carFormData,
 				driverData: driverFormData
 			}
 		};
 		axios(config)
-			.then(res => console.log(res))
+			.then(res => {
+				console.log(res.data)
+				setQuote(res.data.insertedId)
+				window.scrollTo(0, 0)
+			})
 			.catch(() => console.log("There was a catch error"))
 	}
 

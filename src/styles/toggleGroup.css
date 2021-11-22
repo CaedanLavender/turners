@@ -180,6 +180,13 @@
 	-o-border-radius: 0.5em;
 }
 
+.minorButton {
+	padding: 0.5em 1em;
+	border: none;
+	width: fit-content;
+	border-radius: 0.5em;
+}
+
 .button--red {
 	background-color: var(--dark-red);
 	color: white;
@@ -196,4 +203,20 @@
 
 .button--green:hover {
 	background-color: var(--dark-green);
+}
+
+.button--blue {
+	background-color: var(--blue);
+	color: white;
+}
+
+.button--blue:hover {}
+
+.button--dark-blue {
+	background-color: var(--dark-blue);
+	color: white;
+}
+
+.button--dark-blue:hover {
+	background-color: var(--blue);
 }

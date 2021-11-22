@@ -22,10 +22,10 @@ const Quote = () => {
 				<h1>get a quote for:</h1>
 				<ToggleGroup items={insuranceTypes} activeItem={insuranceType} setActiveItem={handleSetInsuranceType}/>
 			</section>
-			<section className='quote__body'>
-				<div className='formContainer'>
+			{/* <section className='quote__body'>
+				<div className='formContainer'> */}
 					<QuoteForm insuranceType={insuranceType}/>
-				</div>
+				{/* </div>
 				<aside className="quoteSideContent">
 					<h2>Why insure with us?</h2>
 					<ul>
@@ -35,7 +35,7 @@ const Quote = () => {
 						<li>provide qualtiy assurance</li>
 					</ul>
 				</aside>
-			</section>
+			</section> */}
 		</div>
 	);
 }
