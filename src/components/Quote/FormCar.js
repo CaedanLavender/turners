@@ -91,7 +91,7 @@ const FormCar = ({ insuranceType, quote, setQuote }) => {
 	const handleQuoteSubmit = () => {
 		const config = {
 			method: 'post',
-			url: localURL + 'quotes/new',
+			url: remoteURL + 'quotes/new',
 			params: {
 				type: insuranceType,
 				carData: carFormData,

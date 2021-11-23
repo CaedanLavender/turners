@@ -14,7 +14,7 @@ const App = ({ quote }) => {
 		console.log('executed function')
 		const config = {
 			method: 'get',
-			url: localURL + 'quotes/send',
+			url: remoteURL + 'quotes/send',
 			params: {
 				quoteId: quote,
 				email: email
