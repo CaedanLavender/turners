@@ -10,18 +10,21 @@ import Quote from './pages/Quote';
 // REACT ROUTER IMPORTS
 import {
 	Routes,
-	Route
+	Route,
+	BrowserRouter
 } from 'react-router-dom'
 
 function App() {
 	return (
 			<div className="App">
 				<Header />
+				<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/insurance" element={<Insurance />} />
 					<Route path="/insurance/get_quote" element={<Quote />} />
 				</Routes>
+				</BrowserRouter>
 				<Footer />
 			</div>
 	);

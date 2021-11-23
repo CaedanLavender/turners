@@ -3,6 +3,7 @@ import './Footer.css';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import turnerslogo from 'assets/turners-logo.jpg';
 
 const Footer = () => {
 	return (
@@ -41,7 +42,7 @@ const Footer = () => {
 			
 		</div>
 		<div className="footer-information">
-			<div className="footer-tings1"><img src="turners-logo.jpg" className="footer-pic" alt=""/></div>
+			<div className="footer-tings1"><img src={turnerslogo} className="footer-pic" alt=""/></div>
 			<div className="footer-tings2"><p className="footer-text1">Call us on 0800 887 637</p></div>
 			<div className="footer-tings3">
 				<button type="button" className="logo-btns1" onclick=""><MailOutlineIcon style={{fill: "white",fontSize:"40px"}}/></button>

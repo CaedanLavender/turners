@@ -3,6 +3,7 @@ import './Header.css';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import AddLocationIcon from '@mui/icons-material/AddLocation';
+import turnerslogo from 'assets/turners-logo.jpg';
 
 const Header = () => {
 	return (
@@ -19,7 +20,7 @@ const Header = () => {
 			</div>
 			<div className="header-info">
 			<div className="header-info-left">
-			<a className="header-text" href="/Home.js"><img src="turners-logo.jpg" className="footer-pic" alt=""/></a></div>
+			<a className="header-text" href="/Home.js"></a></div>
 			<div className="header-info-right">
 			<button type="button" className="header-info-buttons" onClick=""><AccountCircleIcon/> LOGIN or REGISTER</button>
 			<button type="button" className="header-info-buttons" onClick=""><LocalPhoneIcon/> 0800 887 637</button>
