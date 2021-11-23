@@ -101,7 +101,7 @@ const FormCar = ({ insuranceType, quote, setQuote }) => {
 		axios(config)
 			.then(res => {
 				console.log(res.data)
-				setQuote(res.data.insertedId)
+				setQuote(res.data)
 				window.scrollTo(0, 0)
 			})
 			.catch(() => console.log("There was a catch error"))

@@ -185,6 +185,10 @@
 	border: none;
 	width: fit-content;
 	border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	-ms-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
 }
 
 .button--red {

@@ -31,7 +31,7 @@ const QuoteForm = ({ insuranceType }) => {
 		return (
 			<section className='quote__body'>
 				<div className='formContainer'>
-					<YourQuote />
+					<YourQuote quote={quoteNumber} />
 				</div>
 			</section>
 		)

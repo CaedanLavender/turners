@@ -1,10 +1,32 @@
+import axios from "axios";
 import React, { useState } from "react";
 import 'styles/Quote.css'
 import 'styles/toggleGroup.css'
 
 
-const App = () => {
+const App = ({ quote }) => {
 	const [email, setEmail] = useState();
+
+	const remoteURL = "http://turners-api.herokuapp.com/"
+	const localURL = "http://localhost:4000/"
+
+	const handleQuoteEmail = () => {
+		console.log('executed function')
+		const config = {
+			method: 'get',
+			url: localURL + 'quotes/send',
+			params: {
+				quoteId: quote,
+				email: email
+			}
+		};
+
+		axios(config)
+			.then(res => {
+				console.log(res)
+			})
+			.catch(() => console.log("There was a catch error"))
+	}
 
 	return (
 		<>
@@ -20,8 +42,8 @@ const App = () => {
 				</label>
 
 				<form className='emailSubmit'>
-					<input type='text' value={email} placeholder="email@email.com" />
-					<button className='minorButton button--blue'>send</button>
+					<input type='text' value={email} onChange={(e) => setEmail(e.target.value)} placeholder="email@email.com" />
+					<button type="button" className='minorButton button--blue' onClick={handleQuoteEmail}>send</button>
 				</form>
 				talk to our friendly customer service team on 0800 887 637
 				<span className='or'>OR</span>
