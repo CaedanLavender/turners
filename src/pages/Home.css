@@ -1,0 +1,102 @@
+.home-title{
+    text-align: center;
+    font-size: 140px;
+    margin-top: 5%;
+}
+
+.home-container{
+    width: 100vw;
+    height: auto;
+}
+
+.home-cars{
+    width: 100vw;
+    height: auto;
+    display: grid;
+    justify-content: end;
+    margin-top: 5%;
+}
+
+.home-cars-textfield{
+    height: 2%;
+    margin-right: 10%;
+}
+
+.home-cars-grid{
+display: grid;
+grid-template-columns: auto auto auto;
+}
+
+.home-3{
+display: flex;
+justify-content: center;
+
+
+}
+
+.home-cars-textfield input{
+    height: auto;
+    width: 600px;
+    font-size: 30px;
+    margin-top: 10%;
+    margin-right: 400px;
+    border-radius: 30px;
+}
+
+.home-btns{
+    height: auto;
+width: 320px;
+font-size: 30px;
+background-color: #B71334;
+color: white;
+margin: 100px;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+}
+
+.home-ads{
+    display: flex;
+    width: 100vw;
+    height: auto;
+    justify-content: center
+}
+
+.home-ads-grid{
+    grid-row-gap: 50px;
+}
+
+.ads-pics{
+padding-left: 100px;
+}
+
+.home-info{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    padding: 200px;
+}
+
+.home-info-left{
+margin-left: 300px;
+}
+
+.home-info-right{
+    margin-left: 200px;
+}
+
+.home-info-right-text{
+    font-size: 50px;
+    font-weight: bold;
+    color: #000000;
+    padding: 0px 20px 0px 20px;
+    text-decoration: underline;
+}
+
+.home-info-right-dates{
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+    padding: 0px 20px 0px 20px;
+    text-decoration: underline;
+}

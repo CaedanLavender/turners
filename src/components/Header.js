@@ -19,7 +19,7 @@ const Header = () => {
 			</div>
 			<div className="header-info">
 			<div className="header-info-left">
-			<img src="turners-logo.jpg" className="footer-pic" alt=""/></div>
+			<a className="header-text" href="/Home.js"><img src="turners-logo.jpg" className="footer-pic" alt=""/></a></div>
 			<div className="header-info-right">
 			<button type="button" className="header-info-buttons" onClick=""><AccountCircleIcon/> LOGIN or REGISTER</button>
 			<button type="button" className="header-info-buttons" onClick=""><LocalPhoneIcon/> 0800 887 637</button>
@@ -33,7 +33,8 @@ const Header = () => {
 				<button type="button" className="header-text" onClick="">Buy</button>
 				<button type="button" className="header-text" onClick="">Sell</button>
 				<button type="button" className="header-text" onClick="">Finance</button>
-				<button type="button" className="header-text" onClick="">Insurance</button>
+				<a className="header-text" href="/Insurance.js">Insurance</a>
+				<a className="header-text" href="/Quote.js">Quote</a>
 				<button type="button" className="header-text" onClick="">Careers</button>
 				<input type="text" placeholder="Search..."/>
 				</div>
