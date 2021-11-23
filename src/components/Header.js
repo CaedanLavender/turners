@@ -35,7 +35,7 @@ const Header = () => {
 				<button type="button" className="header-text" onClick="">Sell</button>
 				<button type="button" className="header-text" onClick="">Finance</button>
 				<a className="header-text" href="/Insurance.js">Insurance</a>
-				<a className="header-text" href="/Quote.js">Quote</a>
+				<a className="header-text" href="http://turners.herokuapp.com/insurance/get_quote">Quote</a>
 				<button type="button" className="header-text" onClick="">Careers</button>
 				<input type="text" placeholder="Search..."/>
 				</div>
