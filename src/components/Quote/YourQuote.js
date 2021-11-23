@@ -7,7 +7,7 @@ import 'styles/toggleGroup.css'
 const App = ({ quote }) => {
 	const [email, setEmail] = useState();
 
-	const remoteURL = "http://api-turners.herokuapp.com/"
+	const remoteURL = "http://turners-api.herokuapp.com/"
 	const localURL = "http://localhost:4000/"
 
 	const handleQuoteEmail = () => {

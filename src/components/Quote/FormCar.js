@@ -5,7 +5,7 @@ import ToggleSwitch from "components/ToggleSwitch";
 import SelectList from 'components/SelectList'
 
 const FormCar = ({ insuranceType, quote, setQuote }) => {
-	const remoteURL = "http://api-turners.herokuapp.com/"
+	const remoteURL = "http://turners-api.herokuapp.com/"
 	const localURL = "http://localhost:4000/"
 
 	const driverTemplate = {
