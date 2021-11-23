@@ -5,7 +5,7 @@ import ToggleSwitch from "components/ToggleSwitch";
 import SelectList from 'components/SelectList'
 
 const FormCar = ({ insuranceType, quote, setQuote }) => {
-	const remoteURL = "http://turners-api.herokuapp.com/"
+	const remoteURL = "http://api-turners.herokuapp.com/"
 	const localURL = "http://localhost:4000/"
 
 	const driverTemplate = {
@@ -68,8 +68,8 @@ const FormCar = ({ insuranceType, quote, setQuote }) => {
 				plate: carFormData.registration
 			}
 		})
-		.then(res => setCarData(res.data))
-		.catch(() => console.log("There was a catch error"))
+			.then(res => setCarData(res.data))
+			.catch(() => console.log("There was a catch error"))
 	}
 
 	const getAddresses = (prefix) => {
@@ -78,13 +78,13 @@ const FormCar = ({ insuranceType, quote, setQuote }) => {
 				prefix: prefix
 			}
 		})
-		.then(res => setAddressList(res.data))
-		.catch(() => console.log("There was a catch error"))
+			.then(res => setAddressList(res.data))
+			.catch(() => console.log("There was a catch error"))
 		setAddressListIsOpen(true)
 	}
 
 	const handleAddressSelect = (newAddress) => {
-		setCarFormData({ ...carFormData, address: newAddress})
+		setCarFormData({ ...carFormData, address: newAddress })
 		setAddressListIsOpen(false)
 	}
 
@@ -101,7 +101,7 @@ const FormCar = ({ insuranceType, quote, setQuote }) => {
 		axios(config)
 			.then(res => {
 				console.log(res.data)
-				setQuote(res.data)
+				setQuote(res.data.quoteId)
 				window.scrollTo(0, 0)
 			})
 			.catch(() => console.log("There was a catch error"))
@@ -121,7 +121,7 @@ const FormCar = ({ insuranceType, quote, setQuote }) => {
 						<div className='searchButton' onClick={getCarData}>Search</div>
 						<div className='radioOutput'>
 							<div className={`carDataLabel ${carData || "hidden"}`}>
-								<input type='radio' checked={carData === selectedCar} onChange={() => setSelectedCar(carData)} id='carSelect' value={carData}/>
+								<input type='radio' checked={carData === selectedCar} onChange={() => setSelectedCar(carData)} id='carSelect' value={carData} />
 								{carData}
 							</div>
 						</div>
