@@ -1,164 +1,188 @@
 .quoteContainer {
-	max-width: 1200px;
-	padding: 2em;
-	display: flex;
-	flex-direction: column;
-	gap: 3em;
-	align-items: center;
-	margin: 0 auto;
+   max-width: 1200px;
+   padding: 2em;
+   display: flex;
+   flex-direction: column;
+   gap: 3em;
+   align-items: center;
+   margin: 0 auto;
 }
 
 .quote__header {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 
 .quote__body {
-	/* border: 1px solid red; */
-	display: flex;
-	flex-direction: row;
-	gap: 1em;
-	width: 100%;
+   /* border: 1px solid red; */
+   display: flex;
+   flex-direction: row;
+   gap: 1em;
+   width: 100%;
 }
 
 .formContainer {
-	border: 2px solid black;
-	flex: 80%;
-	display: flex;
-	flex-direction: column;
-	padding: 2em;
-	align-items: center;
+   border: 2px solid black;
+   flex: 80%;
+   display: flex;
+   flex-direction: column;
+   padding: 2em;
+   align-items: center;
 }
 
 .quoteSideContent {
-	border: 1px solid black;
-	flex: 20%;
-	padding: 1em;
+   border: 1px solid black;
+   flex: 20%;
+   padding: 1em;
+   height: fit-content;
 }
 
 .formContainer h1 {
-	text-transform: uppercase;
-	width: 100%;
+   text-transform: uppercase;
+   width: 100%;
 }
 
 .formContainer h1::after {
-	margin: 0.2em 0;
-	content: "";
-	display: block;
-	height: 1px;
-	width: 100%;
-	background-color: black;
+   margin: 0.2em 0;
+   content: "";
+   display: block;
+   height: 1px;
+   width: 100%;
+   background-color: black;
 }
 
 .formSection label {
-	margin: 1em 0;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: flex-start;
+   margin: 1em 0;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: flex-start;
 }
 
 .formSection {
-	margin: 0.5em 2em;
-	display: flex;
-	flex-direction: column;
-	width: 100%;
+   margin: 0.5em 2em;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
 }
 
 .formSection__right {
-	display: flex;
-	flex-direction: column;
-	gap: 1em;
-	flex-basis: 50%;
+   display: flex;
+   flex-direction: column;
+   gap: 1em;
+   flex-basis: 50%;
 }
 
 .formSection::after {
-	content: "";
-	display: block;
-	height: 1px;
-	width: 100%;
-	background-color: var(--light-gray);
+   content: "";
+   display: block;
+   height: 1px;
+   width: 100%;
+   background-color: var(--light-gray);
 }
 
 .formSection input[type=text] {
-	outline: none;
-	border: none;
-	background-color: var(--lighter-gray);
-	padding: 1rem;
+   outline: none;
+   border: none;
+   background-color: var(--lighter-gray);
+   padding: 1rem;
 }
 
 .labelText {
-	padding: 1em 0;
+   padding: 1em 0;
 }
 
 .yourQuoteContainer {
-	background-color: var(--puse-blue);
-	width: 100%;
-	height: 100%;
-	border: 1px solid black;
-	margin-bottom: 2em;
+   background-color: var(--puse-blue);
+   width: 100%;
+   height: 100%;
+   border: 1px solid black;
+   margin-bottom: 2em;
 }
 
 .yourQuoteContainer h2, h3 {
-	text-align: center;
+   text-align: center;
 }
 
 .yourQuoteContainer label {
-	text-align: center;
+   text-align: center;
 }
 
 .quoteCardSuper {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 2em 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 2em 0;
 }
 
 .quoteCard {
-	background-color: var(--blue);
-	width: 300px;
-	height: 500px;
+   background-color: var(--blue);
+   width: 400px;
+   height: 600px;
+   border: 1px solid black;
+   background-color: white;
+   padding: 1em;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+}
+
+.quoteCard hr {
+   width: 100%;
+   margin: 1em 0;
+   border: 1px solid black;
+}
+
+.quoteCard__costs {
+   text-align: center;
+   display: flex;
+   justify-content: space-evenly;
+   font-size: 1.1em;
+}
+
+.quoteCard h2,h3 {
+   text-transform: capitalize;
 }
 
 .emailQuote {
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	align-items: center;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   align-items: center;
 }
 
 .emailSubmit {
-	width: 400px;
-	margin: 1em;
-	text-align: center;
-	padding: 1em;
-	background-color: var(--superlight-gray);
-	border: 1px solid var(--gray);
-	border-radius: 6px;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	-ms-border-radius: 6px;
-	-o-border-radius: 6px;
-	display: flex;
-	justify-content: space-between;
+   width: 400px;
+   margin: 1em;
+   text-align: center;
+   padding: 1em;
+   background-color: var(--superlight-gray);
+   border: 1px solid var(--gray);
+   border-radius: 6px;
+   -webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+   -ms-border-radius: 6px;
+   -o-border-radius: 6px;
+   display: flex;
+   justify-content: space-between;
 }
 
 .emailSubmit label {
-	font-size: 1.5em;
+   font-size: 1.5em;
 }
 
 
 .emailQuote input[type=text] {
-	flex: 100%;
-	font-size: 1.2em;
-	outline: none;
-	border: none;
-	background-color: transparent;
+   flex: 100%;
+   font-size: 1.2em;
+   outline: none;
+   border: none;
+   background-color: transparent;
 }
 
 .or {
-	font-size: 1.5em;
-	font-weight: 600;
-	margin: 2em;
+   font-size: 1.5em;
+   font-weight: 600;
+   margin: 2em;
 }

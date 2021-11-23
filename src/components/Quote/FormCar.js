@@ -30,17 +30,18 @@ const FormCar = ({ insuranceType, quote, setQuote }) => {
 		"5 years +"
 	]
 
-	const [carFormData, setCarFormData] = useState({
-		registration: "",
-		business: "n",
-		address: "",
-		startDate: "",
-	});
 	const [driverFormData, setDriverFormData] = useState([driverTemplate]);
 	const [carData, setCarData] = useState();
 	const [selectedCar, setSelectedCar] = useState("")
 	const [addressList, setAddressList] = useState([])
 	const [addressListIsOpen, setAddressListIsOpen] = useState(false);
+	const [carFormData, setCarFormData] = useState({
+		registration: "",
+		model: "",
+		business: "n",
+		address: "",
+		startDate: "",
+	});
 
 	const setBusiness = (value) => {
 		setCarFormData({ ...carFormData, business: value })
@@ -88,7 +89,13 @@ const FormCar = ({ insuranceType, quote, setQuote }) => {
 		setAddressListIsOpen(false)
 	}
 
+	const handleCarSelect = (newCar) => {
+		setSelectedCar(newCar)
+		setCarFormData({ ...carFormData, model: newCar})
+	}
+
 	const handleQuoteSubmit = () => {
+		console.log(carData)
 		const config = {
 			method: 'post',
 			url: remoteURL + 'quotes/new',
@@ -121,7 +128,7 @@ const FormCar = ({ insuranceType, quote, setQuote }) => {
 						<div className='searchButton' onClick={getCarData}>Search</div>
 						<div className='radioOutput'>
 							<div className={`carDataLabel ${carData || "hidden"}`}>
-								<input type='radio' checked={carData === selectedCar} onChange={() => setSelectedCar(carData)} id='carSelect' value={carData} />
+								<input type='radio' checked={carData === selectedCar} onChange={() => handleCarSelect(carData)} id='carSelect' value={carData} />
 								{carData}
 							</div>
 						</div>
