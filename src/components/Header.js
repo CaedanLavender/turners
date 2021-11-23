@@ -20,7 +20,7 @@ const Header = () => {
 			</div>
 			<div className="header-info">
 			<div className="header-info-left">
-			<a className="header-text" href="/Home.js"></a></div>
+			<a className="header-text" href="/Home.js"><img src={turnerslogo} className="footer-pic" alt=""/></a></div>
 			<div className="header-info-right">
 			<button type="button" className="header-info-buttons" onClick=""><AccountCircleIcon/> LOGIN or REGISTER</button>
 			<button type="button" className="header-info-buttons" onClick=""><LocalPhoneIcon/> 0800 887 637</button>
