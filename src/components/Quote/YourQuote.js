@@ -4,7 +4,7 @@ import 'styles/Quote.css'
 import 'styles/toggleGroup.css'
 
 
-const App = ({ quote }) => {
+const YourQuote = ({ quote }) => {
    const [email, setEmail] = useState();
    const [quoteDetails, setQuoteDetails] = useState();
 
@@ -114,4 +114,4 @@ const App = ({ quote }) => {
    );
 }
 
-export default App;
+export default YourQuote;
