@@ -11,5 +11,6 @@ This is an example of a re-design of the turners website built in ReactJS that w
 
 ***
 ## Usage
-You can view the project live [here](http://turners.herokuapp.com)
+You can view the project live [here](http://turners.herokuapp.com).
+
 Visit [/insurance/get_quote](http://turners.herokuapp.com/insurance/get_quote) for a demo of the insurance form
